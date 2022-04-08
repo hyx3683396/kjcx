@@ -1,0 +1,239 @@
+body {
+    box-sizing: border-box;
+    /*此处需要设置溢出隐藏，否则文字起始位移超过页面大小就会在页面下方出现横的滚动条*/
+}
+
+li,
+a {
+    text-decoration: none!important;
+}
+
+.bd-10 {
+    border-radius: 10px;
+}
+
+.color-ccc {
+    color: #ccc;
+}
+
+.color-666 {
+    color: #666;
+}
+
+.color-333 {
+    color: #666;
+}
+
+
+/* 版心 */
+
+.bx {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+
+/* 导航模块 */
+
+.daohang {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #000;
+    z-index: 99999;
+}
+
+.daohang>.bx {
+    overflow: hidden;
+}
+
+nav>ul {
+    float: right;
+    height: 80px;
+}
+
+nav>ul>li {
+    float: left;
+}
+
+nav>ul>li>a {
+    display: block;
+    padding: 0 15px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 70px;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav>ul>li>a:hover {
+    color: #fff;
+    background: url(../img/nav.png) center;
+    background-size: cover;
+}
+
+.daohang.sticky {
+    padding: 5px -50px;
+    background-color: rgb(236, 235, 235);
+    transition: .3s;
+    box-shadow: 3px 5px 10px #ccc;
+}
+
+.tx {
+    padding: 5px -50px;
+    background-color: rgba(236, 235, 235, 0.1);
+    transition: .3s;
+}
+
+.daohang.sticky ul li a {
+    color: #000;
+    background: none;
+}
+
+.daohang.sticky ul li a:hover {
+    color: #00a4ff;
+    font-weight: 500;
+}
+
+.daohang.sticky .ss-box {
+    background-color: #000;
+}
+
+.daohang.sticky .ss-text {
+    color: #fff;
+}
+
+.daohang.sticky .ss-bot {
+    background-color: #000;
+}
+
+.daohang.sticky .ss-bot:hover {
+    background-color: #fff;
+}
+
+.daohang.sticky .ss-box span {
+    color: #00a4ff;
+}
+
+
+/* 导航搜索框模块 */
+
+.ss {
+    position: relative;
+    float: left;
+    margin-top: 30px;
+}
+
+.ss-box {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    line-height: 22px;
+    background-color: #fff;
+    border-radius: 42px;
+    transition: .5s;
+}
+
+.ss-text {
+    float: left;
+    width: 0px;
+    height: 22px;
+    padding: 0px 0px 0px 0px;
+    color: #000;
+    font-size: 14px;
+    line-height: 22px;
+    border: none;
+    background: none;
+    outline: none;
+    transition: .5s;
+}
+
+.ss-bot {
+    float: right;
+    width: 20px;
+    height: 20px;
+    color: #ff007f;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: .8s;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+input::-moz-input-placeholder {
+    color: #ccc;
+}
+
+input::-ms-input-placeholder {
+    color: #ccc;
+}
+
+.ss-box:hover {
+    width: 250px;
+}
+
+
+/* .ss-box:hover .ss-bot {
+    border: 1px solid #000;
+} */
+
+.ss-box:hover .ss-text {
+    width: 200px;
+}
+
+.ss-box a:hover {
+    background-color: #000;
+}
+
+.ss-box a:hover span {
+    color: #00a4ff;
+}
+
+.ss-box span {
+    color: #00a4ff;
+}
+
+
+/* 扫光 */
+
+.sp {
+    position: absolute;
+    left: 550px;
+    float: left;
+    margin-top: 30px;
+}
+
+.sp span {
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #000, #00a4ff, #000);
+    /* 裁剪掉文字以外的区域 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: move 2s linear infinite;
+}
+
+
+/* 定义动画 */
+
+@keyframes move {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
